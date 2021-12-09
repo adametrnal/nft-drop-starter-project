@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import twitterLogo from './assets/twitter-logo.svg';
+import CandyMachine from './CandyMachine';
 
 // Constants
 const TWITTER_HANDLE = '_buildspace';
@@ -66,10 +67,11 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header">🍭 Dandy Drop</p>
+          <p className="header">📷 Photo Drop</p>
           <p className="sub-text">NFT drop machine with fair mint</p>
           {!walletAddress && renderNotConnectedContainer()}
         </div>
+        {walletAddress && <CandyMachine walletAddress={window.solana} />}
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
           <a

@@ -6,6 +6,9 @@
 .pnp.js
 .env
 
+/assets
+/.cache
+
 # testing
 /coverage
 
@@ -18,8 +21,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
-/assets
-/.cache
+
 
 npm-debug.log*
 yarn-debug.log*
